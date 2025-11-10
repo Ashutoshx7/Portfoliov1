@@ -16,7 +16,7 @@ const Navbar = () => {
     <Container>
       <nav className="flex items-center justify-between">
         {/* Avatar on the left */}
-        <Image className="w-10 h-10 rounded-full" src="/avatar.webp" width={100} height={100} alt="Avatar" />
+        <Image className="w-10 h-10 rounded-full" src="/Avatar.jpeg" width={100} height={100} alt="Avatar" />
 
         {/* Navigation links on the right */}
         <div className="flex items-center space-x-6">
