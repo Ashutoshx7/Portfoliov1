@@ -20,7 +20,10 @@
     --color-secondary: var(--color-neutral-300);
   }
 /* === Minimal SVG Underline Animation (Elara style) === */
-
+.link--elara {
+  position: relative;
+  overflow: hidden;
+}
 
 /* The animated underline */
 .link--elara::before {
