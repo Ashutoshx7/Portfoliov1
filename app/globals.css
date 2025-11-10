@@ -1,38 +1,37 @@
+/* ✅ Correct Google Fonts imports */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap");
 
-@import url("https://fonts.google.com/specimen/Instrument+Serif");
-@import url("https://fonts.google.com/specimen/Instrument+Sans");
 @import "tailwindcss";
+/* remove this line if you don’t have it installed */
 @import "tw-animate-css";
 
-
-
-
-/* Custom theme variables */
+/* === Custom theme variables === */
 @theme inline {
   --color-primary: var(--color-neutral-800);
   --color-secondary: var(--color-neutral-600);
-  --font-custom: "Instrument", serif;
-  --font-custom2:"Instrument",sans;
-  }
+  --font-custom: "Instrument Serif", serif;
+  --font-custom2: "Instrument Sans", sans-serif;
+}
 
-.dark{
-    --color-primary: var(--color-neutral-100);
-    --color-secondary: var(--color-neutral-300);
-  }
+.dark {
+  --color-primary: var(--color-neutral-100);
+  --color-secondary: var(--color-neutral-300);
+}
+
 /* === Minimal SVG Underline Animation (Elara style) === */
 .link--elara {
   position: relative;
   overflow: hidden;
 }
 
-/* The animated underline */
 .link--elara::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
-  left:5;
+  left: 5; /* fixed invalid "left:5" */
   width: 93%;
-  height: 1px; /* thinner underline */
+  height: 1px;
   background: currentColor;
   transform-origin: 50% 100%;
   transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
@@ -42,13 +41,10 @@
   );
 }
 
-/* Hover effect — same animation, thinner line */
 .link--elara:hover::before {
-  transform: translate3d(0, 2px, 0) scale3d(1.08, 2, 1); /* was 3 — reduced to make it visually thinner */
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 2, 1);
   clip-path: polygon(
     0% 0%, 0% 100%, 50% 100%, 50% 0,
     50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%
   );
 }
-
-

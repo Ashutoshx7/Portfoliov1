@@ -9,7 +9,7 @@ export default function Home() {
       <Container className="min-h-screen p-4 md:p-10">
         {/* Heading */}
         <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary ">
-          <span className="link--elara">Karn singh</span>
+          <span className="link--elara">Karn Singh</span>
         
         </h1>
 
