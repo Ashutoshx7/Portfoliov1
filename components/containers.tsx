@@ -5,7 +5,7 @@ const Container = ({children,className}: {
     className?:String,
     }) => {
   return (
-    <div className={cn("max-w-4xl mx-auto bg-white dard:bg-black  p-4 md:p-10" ,className)}>{children}</div>
+    <div className={cn("max-w-4xl mx-auto w- bg-white    dar:bg-black" ,className)}>{children}</div>
   )
 }
 

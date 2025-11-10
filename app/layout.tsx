@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
-const inter=Inter({weight:["400","500","600","700","800"]});
+import Navbar from "@/components/Navbar"
+import { Instrument_Serif } from "next/font/google";
+
+
+const instrumentSerif = Instrument_Serif({ weight : ["400"] });
+
 
 
 export const metadata: Metadata = {
@@ -18,8 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className}  antialiased  bg-neutral-100 dard:bg-neutral-700`}
+        className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dard:bg-neutral-700`}
       >
+        <Navbar></Navbar>
         {children}
       </body>
     </html>

@@ -1,31 +1,35 @@
-"use client"
+"use client";
 
 import Image from "next/image";
-import Navbar from "@/components/Navbar"
-
-import Container from "@/components/containers"
-import { Inter } from "next/font/google";
-
-const inter = Inter({ weight: ["400", "500", "800", "900"] })
+import Container from "@/components/containers";
 
 export default function Home() {
   return (
+    <div className="flex min-h-screen justify-center font-sans">
+      <Container className="min-h-screen p-4 md:p-10">
+        {/* Heading */}
+        <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary ">
+          <span className="link--elara">Karn singh</span>
+        
+        </h1>
 
-
-    <div className="flex min-h-screen  justify-center  font-sans ">
-
-
-      <Container className=" min-h-screen">
-        <Navbar></Navbar>
-        <h1 className="text-2xl md:3xl font-bold   tracking-tight  text-neutral-600"> Karn Ashutosh Singh </h1>
-        <div>
-        </div>
-          <p className="text-neutral-600">&.Like to code and can tell me and build software  yara yara  and also passionate abou open source and
-          <p className="text-neutral-600"> &.yokoso and alos good at one thing com,muncatiing
-
+        {/* Paragraphs */}
+        <div className="text-secondary font-custom2 ">
+          <p >
+            <span>Engineer / Artist — I love building and breaking stuff.</span>
           </p>
-        </p>
 
+          <p >
+            <span>AI is something that excites me nowadays.</span>
+          </p>
+
+          <p >
+            <span>
+              Believe in putting my code where my mouth is — actions speak louder
+              than words, especially in code 💻.
+            </span>
+          </p>
+        </div>
       </Container>
     </div>
   );
