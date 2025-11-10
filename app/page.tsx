@@ -2,6 +2,31 @@
 
 import Image from "next/image";
 import Container from "@/components/containers";
+import { WorkExperience } from "@/components/work-experience";
+import type { ExperienceItemType } from "@/components/work-experience";
+const WORK_EXPERIENCE: ExperienceItemType[] = [
+  {
+    id: "1",
+    companyName: "Google Summer Of Code",
+    companyLogo: "",
+    isCurrentEmployer: true,
+    positions: [
+      {
+        id: "1-1",
+        title: "Senior Software Engineer",
+        employmentPeriod: "Jan 2022 - Present",
+        employmentType: "Full-time",
+        description:
+          "Leading a team of developers to build scalable web applications.",
+        icon: "code",
+        skills: ["JavaScript", "React", "Node.js"],
+        isExpanded: true,
+      },
+      
+    ],
+  },
+];
+
 
 export default function Home() {
   return (
@@ -30,6 +55,9 @@ export default function Home() {
             </span>
           </p>
         </div>
+        <WorkExperience experiences={WORK_EXPERIENCE} />
+
+        
       </Container>
     </div>
   );

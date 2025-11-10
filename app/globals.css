@@ -1,10 +1,12 @@
 /* ✅ Correct Google Fonts imports */
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap");
-
+@plugin "@tailwindcss/typography";
 @import "tailwindcss";
 /* remove this line if you don’t have it installed */
 @import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 /* === Custom theme variables === */
 @theme inline {
@@ -12,11 +14,19 @@
   --color-secondary: var(--color-neutral-600);
   --font-custom: "Instrument Serif", serif;
   --font-custom2: "Instrument Sans", sans-serif;
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-background: var(--background);
 }
 
 .dark {
   --color-primary: var(--color-neutral-100);
   --color-secondary: var(--color-neutral-300);
+  --background: oklch(0.141 0.005 285.823);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --border: oklch(0.274 0.006 286.033);
 }
 
 /* === Minimal SVG Underline Animation (Elara style) === */
@@ -48,3 +58,12 @@
     50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%
   );
 }
+
+:root {
+  --background: oklch(1 0 0);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --border: oklch(0.92 0.004 286.32);
+}
+
+
