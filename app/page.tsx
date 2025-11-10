@@ -7,7 +7,7 @@ import type { ExperienceItemType } from "@/components/work-experience";
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
-    companyName: "Google Summer Of Code",
+    companyName: "Linux Foundation Mentorship",
     companyLogo: "",
     isCurrentEmployer: true,
     positions: [
@@ -39,24 +39,31 @@ export default function Home() {
         </h1>
 
         {/* Paragraphs */}
-        <div className="text-secondary font-custom2 ">
+        <div className="text-secondary font-custom2 text-s">
           <p >
-            <span>Engineer / Artist — I love building and breaking stuff.</span>
+            <span>⚀ Engineer / Artist — I love building and breaking stuff.</span>
           </p>
 
           <p >
-            <span>AI is something that excites me nowadays.</span>
+            <span>⚁ AI is something that excites me nowadays.</span>
           </p>
 
           <p >
             <span>
-              Believe in putting my code where my mouth is — actions speak louder
+              ⚂ Believe in putting my code where my mouth is — actions speak louder
               than words, especially in code 💻.
             </span>
           </p>
         </div>
-        <WorkExperience experiences={WORK_EXPERIENCE} />
 
+        <br></br>
+        
+        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary">
+          <span className="link--elara width: 93%;
+  height: 5px;">Experience</span></h2>
+        <WorkExperience experiences={WORK_EXPERIENCE} />
+        <WorkExperience experiences={WORK_EXPERIENCE} />
+     
         
       </Container>
     </div>
