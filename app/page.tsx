@@ -40,17 +40,21 @@ export default function Home() {
 
         {/* Paragraphs */}
         <div className="text-secondary font-custom2 text-s">
-          <p >
-            <span>⚀ Engineer / Artist — I love building and breaking stuff.</span>
+          <p > 
+            <span className="text-neutral-950 ">⚀</span>
+            <span>Engineer / Artist — I love building and breaking stuff.</span>
+            
           </p>
 
           <p >
-            <span>⚁ AI is something that excites me nowadays.</span>
+            <span className="text-neutral-950 ">⚁</span>
+            <span>AI is something that excites me nowadays.</span>
           </p>
 
           <p >
+            <span className="text-neutral-950 ">⚂</span>
             <span>
-              ⚂ Believe in putting my code where my mouth is — actions speak louder
+               Believe in putting my code where my mouth is — actions speak louder
               than words, especially in code 💻.
             </span>
           </p>
