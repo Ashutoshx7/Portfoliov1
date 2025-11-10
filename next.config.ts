@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    unoptimized: false, // default true for Next 15 app router
+  },
 };
 
 export default nextConfig;
+
