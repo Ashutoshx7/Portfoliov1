@@ -4,6 +4,7 @@ import Image from "next/image";
 import Container from "@/components/containers";
 import { WorkExperience } from "@/components/work-experience";
 import type { ExperienceItemType } from "@/components/work-experience";
+import Projects from "@/components/projects";
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
@@ -31,7 +32,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center font-sans">
-      <Container className="min-h-[200vh] p-4 md:p-20 md:pb-10">
+      <Container className="min-h-[200vh] px-8 md:p-20 md:pb-10">
         <div className=" absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed"></div>
         <div className=" absolute left-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed"></div>
         {/* Heading */}
@@ -62,13 +63,17 @@ export default function Home() {
           </p>
         </div>
 
+        <Projects></Projects>
+
         <br></br>
         
-        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary">
+        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-20">
           <span className="link--elara py-5;
   height: 5px;">Experience</span></h2>
+        
         <WorkExperience experiences={WORK_EXPERIENCE} />
         <WorkExperience experiences={WORK_EXPERIENCE} />
+        
      
         
       </Container>
