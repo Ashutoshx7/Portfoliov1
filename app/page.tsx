@@ -31,7 +31,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center font-sans">
-      <Container className="min-h-screen p-4 md:p-10">
+      <Container className="min-h-[200vh] p-4 md:p-20 md:pb-10">
         {/* Heading */}
         <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary ">
           <span className="link--elara">Karn Singh</span>
@@ -39,7 +39,7 @@ export default function Home() {
         </h1>
 
         {/* Paragraphs */}
-        <div className="text-secondary font-custom2 text-s">
+        <div className="text-secondary font-custom2 text-s py-1">
           <p > 
             <span className="text-neutral-950 ">⚀</span>
             <span>Engineer / Artist — I love building and breaking stuff.</span>
@@ -63,7 +63,7 @@ export default function Home() {
         <br></br>
         
         <h2 className="font-custom tracking-wide text-3xl font-bold text-primary">
-          <span className="link--elara width: 93%;
+          <span className="link--elara py-5;
   height: 5px;">Experience</span></h2>
         <WorkExperience experiences={WORK_EXPERIENCE} />
         <WorkExperience experiences={WORK_EXPERIENCE} />

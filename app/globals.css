@@ -20,6 +20,17 @@
   --color-background: var(--background);
 }
 
+/* ✅ Move this OUTSIDE of @theme inline */
+:root {
+  --shadow-input: 0px 2px 3px -1px rgba(0,0,0,0.1),
+                  0px 1px 0px 0px rgba(25,28,33,0.02),
+                  0px 0px 0px 1px rgba(25,28,33,0.08);
+  --background: oklch(1 0 0);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --border: oklch(0.92 0.004 286.32);
+}
+
 .dark {
   --color-primary: var(--color-neutral-100);
   --color-secondary: var(--color-neutral-300);
@@ -58,12 +69,3 @@
     50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%
   );
 }
-
-:root {
-  --background: oklch(1 0 0);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --border: oklch(0.92 0.004 286.32);
-}
-
-
