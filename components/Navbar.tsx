@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/containers";
-import { motion ,useScroll, useMotionValueEvent} from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Navbar = () => {
   const navItems = [
@@ -15,32 +15,28 @@ const Navbar = () => {
 
   const [hovered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
-  const [scrolled,setScrolled]=useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if(latest>20){
-      setScrolled(true);
-
-    }else{
-      setScrolled(false);
-    }
+    setScrolled(latest > 20);
   });
 
   return (
-    <Container >
-      <motion.nav   
+    <Container>
+      <motion.nav
         animate={{
-        boxShadow: scrolled?"var(--shadow-input)":"none",
-        width: scrolled ? "50%": "100%",
-        y:scrolled?10:0,
-      }}
-      transition={{
-        duration:0.3,
-        ease:"linear"
-
-      }}
-       className="fixed inset-x-0 top-0   flex max-w-4xl mx-auto items-center justify-between p-2 rounded-3xl
-       py-2 px-3 bg-white dark:bg-neutral-900">
+          boxShadow: scrolled ? "var(--shadow-input)" : "none",
+          width: scrolled ? "50%" : "100%",
+          y: scrolled ? 10 : 0,
+          borderRadius: scrolled ? "1.5rem" : "0rem", 
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+        className="fixed inset-x-0 top-0 z-50 flex max-w-3xl mx-auto items-center justify-between
+        p-2 py-2 px-2 bg-white dark:bg-neutral-900 shadow-md"
+      >
         {/* Avatar on the left */}
         <Image
           className="w-10 h-10 rounded-full"
@@ -58,12 +54,13 @@ const Navbar = () => {
               href={item.href}
               key={idx}
               onMouseEnter={() => setHovered(idx)}
-              onMouseLeave={()=> setHovered(null)}
+              onMouseLeave={() => setHovered(null)}
             >
-              {hovered ===idx &&(
-              <motion.span layoutId="hovered-span"
-                className="h-full w-full absolute inset-0 rounded-md bg-neutral-100 dark:bg-neutral-800"
-              />
+              {hovered === idx && (
+                <motion.span
+                  layoutId="hovered-span"
+                  className="h-full w-full absolute inset-0 rounded-md bg-neutral-100 dark:bg-neutral-800"
+                />
               )}
               <span className="relative z-10">{item.title}</span>
             </Link>

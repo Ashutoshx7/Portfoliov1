@@ -1,4 +1,3 @@
-"use "
 
 import type { Metadata } from "next";
 import "./globals.css";
@@ -24,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dard:bg-neutral-700`}
+        className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
       >
-        <Navbar></Navbar>
+        <Navbar ></Navbar>
         {children}
       </body>
     </html>
