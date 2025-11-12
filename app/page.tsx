@@ -62,7 +62,7 @@ export default function Home() {
             </span>
           </p>
         </div>
-        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] -"></div>
+        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-3"></div>
 
         <Projects></Projects>
         <br></br>

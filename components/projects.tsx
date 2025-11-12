@@ -28,7 +28,9 @@ const Projects = () => {
     }]
   return (
     <div className="px-">
-        <p className="text-secondary font-cutom2 max-w-lg pt-4 text-s ">I love production grade Applications</p>
+        <h2 className=" text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary mt-8">
+            <span className="link--elara">Projects</span></h2>
+        <p className="text-secondary font-cutom2  max-w-lg pt-4 text-s ">I love production grade Applications</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 py-4">
         {projects.slice(0,3).  map((project,idx)=> (<motion.div
         initial={{opacity:0,filter:"blur(10px)",y:10}}
