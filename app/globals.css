@@ -7,6 +7,18 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+/* Custom selection color */
+::selection {
+  background: #d5d7dd; /* bright yellow highlight */
+  color: #000; /* black text */
+}
+
+/* Optional: for Firefox */
+::-moz-selection {
+  background: #ffe400;
+  color: #000;
+}
+
 
 /* === Custom theme variables === */
 @theme inline {
