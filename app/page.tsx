@@ -62,12 +62,15 @@ export default function Home() {
             </span>
           </p>
         </div>
+        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] -"></div>
 
         <Projects></Projects>
-
         <br></br>
-        
-        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-20">
+
+          
+        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-16">
+          <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
+          
           <span className="link--elara py-5;
   height: 5px;">Experience</span></h2>
         

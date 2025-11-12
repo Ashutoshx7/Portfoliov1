@@ -11,7 +11,7 @@ const instrumentSerif = Instrument_Serif({ weight : ["400"] });
 
 
 export const metadata: Metadata = {
-  title: "Potfolio website v1",
+  title: "Karn",
   description: "A perfect portfolio website template that showcases my skills and learning",
 };
 
