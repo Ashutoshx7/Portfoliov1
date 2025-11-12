@@ -8,17 +8,17 @@ import Projects from "@/components/projects";
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
-    companyName: "Linux Foundation Mentorship",
+    companyName: "Google summer of code",
     companyLogo: "",
     isCurrentEmployer: true,
     positions: [
       {
         id: "1-1",
-        title: "Senior Software Engineer",
-        employmentPeriod: "Jan 2022 - Present",
-        employmentType: "Full-time",
+        title: "Open Source Summer Inter",
+        employmentPeriod: "May 2025 - September2025",
+        employmentType: "Itern",
         description:
-          "Leading a team of developers to build scalable web applications.",
+          "build scalable web applications.",
         icon: "code",
         skills: ["JavaScript", "React", "Node.js"],
         isExpanded: true,

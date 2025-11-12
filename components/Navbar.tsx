@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Avatar on the left */}
         <Image
           className="w-10 h-10 rounded-full"
-          src="/Avatar2.jpeg"
+          src="/Avatar11.jpg"
           width={100}
           height={100}
           alt="Avatar"
