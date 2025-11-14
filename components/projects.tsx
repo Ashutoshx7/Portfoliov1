@@ -164,8 +164,8 @@ const Projects = () => {
 
             {/* CONTENT */}
             <div className="p-5 relative z-30">
-              <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg font-semibold">{project.title}</h2>
+              <div className="flex items-center justify-between mb-2 ">
+                <h2 className="text-lg font-custom font-semibold text-primary">{project.title}</h2>
 
                 <div className="flex gap-3">
                   <Globe
@@ -186,7 +186,7 @@ const Projects = () => {
               </p>
 
               {/* TECH STACK */}
-              <p className="text-xs text-neutral-500 font-medium mb-2">Tech Stack</p>
+              <p className="text-xs text-neutral-500 font-medium mb-2 font-custom2">Tech Stack</p>
 
               <div className="flex gap-2 flex-wrap">
                 {project.tech.map((key) => {
