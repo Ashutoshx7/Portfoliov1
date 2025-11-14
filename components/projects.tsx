@@ -82,8 +82,7 @@ const Projects = () => {
       title: "Nimbus",
       src: "/NimbusIDE.png",
       video: "https://www.youtube.com/embed/98QD-V3ox8g?si=wPWipbLIfGpQ9ttK",
-      description:
-        "An AI-powered web IDE built fully in the browser using WebContainers.",
+      description: "An AI-powered web IDE built fully in the browser using WebContainers.",
       tech: ["next", "ts", "cloud", "node"],
       github: "https://github.com/",
       live: "https://yourlive.com",
@@ -101,20 +100,16 @@ const Projects = () => {
 
   return (
     <div className="mt-8">
-
       {/* Title */}
       <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary">
         <span className="link--elara">Projects</span>
       </h1>
 
-      {/* Subtle Premium Tagline */}
+      {/* Subtitle */}
       <p
         className="
-          font-custom2 text-secondary mt-3
-          px-4 py-[7px]
-          rounded-md
-          text-sm
-          inline-block
+          font-custom2 text-secondary mt-3 px-4 py-[7px]
+          rounded-md text-sm inline-block
           bg-black/[0.025] dark:bg-white/[0.04]
           border border-black/[0.05] dark:border-white/[0.06]
           shadow-[0_1px_3px_rgba(0,0,0,0.04)]
@@ -129,25 +124,14 @@ const Projects = () => {
         {projects.map((project, idx) => (
           <motion.div
             key={project.title}
-            
-            /* ⭐ RESTORED ORIGINAL ENTRY ANIMATION ⭐ */
-            initial={{ 
-              opacity: 0, 
-              y: 20, 
-              filter: "blur(12px)" 
-            }}
-            whileInView={{ 
-              opacity: 1, 
-              y: 0, 
-              filter: "blur(0px)" 
-            }}
-            transition={{ 
-              duration: 0.55, 
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 0.6,
               ease: "easeOut",
-              delay: idx * 0.12 
+              delay: idx * 0.12,
             }}
-            viewport={{ once: true, amount: 0.25 }}
-
+            viewport={{ once: true, amount: 0.2 }}
             className="
               relative group overflow-hidden rounded-xl
               border border-neutral-200 dark:border-neutral-800
@@ -156,7 +140,7 @@ const Projects = () => {
               transition-all duration-300
             "
           >
-            {/* Ambient Hover Gradient Behind Card */}
+            {/* Glow */}
             <div
               className="
                 absolute inset-0 pointer-events-none
@@ -175,11 +159,22 @@ const Projects = () => {
                 fill
                 className="
                   object-cover transition-all duration-500
-                  group-hover:scale-[1.045]
+                  group-hover:scale-[1.04]
+                  group-hover:brightness-[0.90]
                 "
               />
 
-              {/* PLAY BUTTON OVERLAY */}
+              {/* Black tint overlay */}
+              <div
+                className="
+                  absolute inset-0 
+                  bg-black/0 
+                  group-hover:bg-black/10
+                  transition-all duration-500
+                "
+              />
+
+              {/* PLAY BUTTON */}
               <div
                 onClick={() => setActiveVideo(project.video)}
                 className="
@@ -197,7 +192,7 @@ const Projects = () => {
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='currentColor'
-                    viewBox='0_0_24_24'
+                    viewBox='0 0 24 24'
                     className='w-6 h-6 text-black dark:text-white'
                   >
                     <path d='M5.25 5.653v12.694c0 .856.926 1.39 1.668.958l11.1-6.347a1.125 1.125 0 000-1.916L6.918 4.695c-.742-.432-1.668.102-1.668.958z'/>
@@ -232,7 +227,7 @@ const Projects = () => {
                 {project.description}
               </p>
 
-              {/* Tech Stack */}
+              {/* TECH STACK */}
               <p className="text-xs text-neutral-500 font-medium mb-2 font-custom2">
                 Tech Stack
               </p>
@@ -240,7 +235,6 @@ const Projects = () => {
               <div className="flex gap-2 flex-wrap">
                 {project.tech.map((key) => {
                   const Icon = iconMap[key];
-
                   return (
                     <div
                       key={key}
@@ -250,49 +244,46 @@ const Projects = () => {
                         border border-neutral-300/60 dark:border-neutral-700/60
                         shadow-[inset_0_0_4px_rgba(0,0,0,0.08)]
                         backdrop-blur-md
-                        transition-all duration-200
-                        hover:scale-105 hover:shadow-md
-                        group/icon
+                        transition-all duration-300
+
+                        /* icon hover effects */
+                        hover:scale-110
+                        hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]
+                        dark:hover:shadow-[0_4px_12px_rgba(255,255,255,0.18)]
                       "
                     >
                       <Icon
                         size={16}
                         style={{ color: techColors[key] }}
                         className="
-                          transition-all duration-200
-                          grayscale group-hover/icon:grayscale-0
+                          transition-all duration-300
+                          grayscale hover:grayscale-0
                         "
                       />
                     </div>
                   );
                 })}
               </div>
-            </div>
 
+            </div>
           </motion.div>
         ))}
       </div>
 
-      {/* VIDEO MODAL */}
+      {/* MODAL */}
       <AnimatePresence>
         {activeVideo && (
           <motion.div
-            initial={{
-            opacity: 0}}
-            animate={{
-            opacity: 1}}
-            exit={{
-            opacity: 0}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onClick={() => setActiveVideo(null)}
             className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 cursor-pointer"
           >
             <motion.div
-              initial={{
-              scale: 0.92, opacity: 0}}
-              animate={{
-              scale: 1, opacity: 1}}
-              exit={{
-              scale: 0.92, opacity: 0}}
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
               className="relative bg-black rounded-xl overflow-hidden w-[90%] max-w-3xl shadow-xl"
             >
@@ -317,10 +308,42 @@ const Projects = () => {
                   autoPlay
                 />
               )}
+
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+    <motion.div
+  initial={{ opacity: 0, filter: "blur(10px)" }}
+  whileInView={{ opacity: 1, filter: "blur(0px)" }}
+  transition={{
+    duration: 0.6,
+    ease: "easeOut",
+    delay: projects.length * 0.12, // after last card animation
+  }}
+  viewport={{ once: true, amount: 0.2 }}
+  className="w-full flex justify-center mt-2"
+>
+  <button
+    className="
+      px-6 py-2  
+      rounded-xl
+      bg-white dark:bg-neutral-900
+      border border-neutral-200 dark:border-neutral-800
+      text-neutral-700 dark:text-neutral-200
+      shadow-sm
+      hover:shadow-md
+      transition-all duration-300
+      backdrop-blur-[2px]
+
+      hover:bg-neutral-50/80 dark:hover:bg-neutral-800/60
+      hover:border-neutral-300 dark:hover:border-neutral-600
+    "
+  >
+    Show More
+  </button>
+</motion.div>
+
     </div>
   );
 };
