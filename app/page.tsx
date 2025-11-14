@@ -120,7 +120,7 @@ export default function Home() {
         {/* EXPERIENCE */}
         {/* ---------------------------------------- */}
 
-        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-16">
+        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-1">
           <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)]"></div>
           <span className="link--elara py-5;">Experience</span>
         </h2>

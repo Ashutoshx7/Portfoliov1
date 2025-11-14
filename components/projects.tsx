@@ -129,10 +129,25 @@ const Projects = () => {
         {projects.map((project, idx) => (
           <motion.div
             key={project.title}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, ease: "easeOut", delay: idx * 0.08 }}
-            viewport={{ once: true }}
+            
+            /* ⭐ RESTORED ORIGINAL ENTRY ANIMATION ⭐ */
+            initial={{ 
+              opacity: 0, 
+              y: 20, 
+              filter: "blur(12px)" 
+            }}
+            whileInView={{ 
+              opacity: 1, 
+              y: 0, 
+              filter: "blur(0px)" 
+            }}
+            transition={{ 
+              duration: 0.55, 
+              ease: "easeOut",
+              delay: idx * 0.12 
+            }}
+            viewport={{ once: true, amount: 0.25 }}
+
             className="
               relative group overflow-hidden rounded-xl
               border border-neutral-200 dark:border-neutral-800
@@ -182,10 +197,10 @@ const Projects = () => {
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='currentColor'
-                    viewBox='0 0 24 24'
+                    viewBox='0_0_24_24'
                     className='w-6 h-6 text-black dark:text-white'
                   >
-                    <path d="M5.25 5.653v12.694c0 .856.926 1.39 1.668.958l11.1-6.347a1.125 1.125 0 000-1.916L6.918 4.695c-.742-.432-1.668.102-1.668.958z"/>
+                    <path d='M5.25 5.653v12.694c0 .856.926 1.39 1.668.958l11.1-6.347a1.125 1.125 0 000-1.916L6.918 4.695c-.742-.432-1.668.102-1.668.958z'/>
                   </svg>
                 </div>
               </div>
@@ -193,6 +208,7 @@ const Projects = () => {
 
             {/* CONTENT */}
             <div className="p-5">
+
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-lg font-custom font-semibold text-primary">
                   {project.title}
@@ -252,6 +268,7 @@ const Projects = () => {
                 })}
               </div>
             </div>
+
           </motion.div>
         ))}
       </div>
@@ -260,16 +277,22 @@ const Projects = () => {
       <AnimatePresence>
         {activeVideo && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{
+            opacity: 0}}
+            animate={{
+            opacity: 1}}
+            exit={{
+            opacity: 0}}
             onClick={() => setActiveVideo(null)}
             className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 cursor-pointer"
           >
             <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
+              initial={{
+              scale: 0.92, opacity: 0}}
+              animate={{
+              scale: 1, opacity: 1}}
+              exit={{
+              scale: 0.92, opacity: 0}}
               onClick={(e) => e.stopPropagation()}
               className="relative bg-black rounded-xl overflow-hidden w-[90%] max-w-3xl shadow-xl"
             >
