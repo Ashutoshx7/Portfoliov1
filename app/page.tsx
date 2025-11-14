@@ -88,17 +88,17 @@ export default function Home() {
 
         <div className="text-secondary font-custom2 text-s mt-1">
           <p>
-            <span className="text-neutral-950">⚀</span>
+            <span className="text-neutral-950 font-semibold font-custom">⚀ </span>
             <span>Engineer / Artist — I love building and breaking stuff.</span>
           </p>
 
           <p>
-            <span className="text-neutral-950">⚁</span>
+            <span className="text-neutral-950 font-semibold">⚁ </span>
             <span>AI is something that excites me nowadays.</span>
           </p>
 
           <p>
-            <span className="text-neutral-950">⚂</span>
+            <span className="text-neutral-950  font-semibold">⚂ </span>
             <span>
               Believe in putting my code where my mouth is — actions speak louder
               than words, especially in code 💻.
