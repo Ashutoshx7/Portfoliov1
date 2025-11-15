@@ -9,13 +9,13 @@
 @custom-variant dark (&:is(.dark *));
 /* Custom selection color */
 ::selection {
-  background: #d5d7dd; /* bright yellow highlight */
+  background: #dce000; /* bright yellow highlight */
   color: #000; /* black text */
 }
 
 /* Optional: for Firefox */
 ::-moz-selection {
-  background: #ffe400;
+  background: #58553e;
   color: #000;
 }
 
@@ -85,3 +85,6 @@
     50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%
   );
 }
+
+/* Make only h1 inside .prose extra bold */
+
