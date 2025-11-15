@@ -26,18 +26,18 @@ const Navbar = () => {
       <motion.nav
         animate={{
           boxShadow: scrolled ? "var(--shadow-input)" : "none",
-          width: scrolled ? "50%" : "100%",
+          width: scrolled ? "40%" : "70%",
           y: scrolled ? 10 : 0,
-          borderRadius: scrolled ? "1.5rem" : "0rem", 
+          borderRadius: scrolled ? "2.5rem" : "0rem", 
         }}
         transition={{
           duration: 0.3,
           ease: "linear",
         }}
         className="fixed inset-x-0 top-0 z-50 flex max-w-3xl mx-auto items-center justify-between
-        p-2 py-2 px-2 bg-white dark:bg-neutral-900 shadow-md"
+        p-2 py-2 px-2 bg-white dark:bg-neutral-900 font-custom shadow-md "
       >
-        {/* Avatar on the left */}
+        
         <Image
           className="w-10 h-10 rounded-full"
           src="/Avatar11.jpg"
