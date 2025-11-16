@@ -12,7 +12,7 @@ export default async function BlogIndex() {
   const posts = await getAllBlogs();
 
   return (
-    <Container className="min-h-screen px-8 md:p-20 md:pb-10 relative">
+    <Container className="min-h-screen px-8 md:p-20 md:pb-10 relative mx-auto">
       <div
           className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg)
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
@@ -25,18 +25,19 @@ export default async function BlogIndex() {
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
           bg-[size:10px_10px] bg-fixed"
         />
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto ">
 
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-3">
           <h1 className="text-4xl text-primary  md:text-4xl font-bold font-custom tracking-tight ">All blogs</h1>
 
-          <p className="text-s mt-1 text-muted-foreground leading-relaxed  tracking-tight font-custom2 max-w-xl">
+          <p className="text-stext-muted-foreground leading-relaxed  tracking-tight font-custom2 max-w-xl">
             I'm a software engineer with a passion for building scalable
             and efficient systems. I'm currently working as a software
             engineer at Google.
           </p>
         </div>
+        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
 
         {/* Blog Posts */}
         <div className="divide-y divide-border/40">
@@ -52,7 +53,7 @@ export default async function BlogIndex() {
                 <div className="flex-1">
                   <h2
                     className="
-                      text-xl md:text-2xl font-semibold font-custom mb-2
+                      text-s md:text-xl font-semibold font-custom mb-1
                       group-hover:text-primary transition-colors
                     "
                   >
