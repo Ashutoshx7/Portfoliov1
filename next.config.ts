@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 /** @type {import('next').NextConfig} */
-const withMDX = require('@next/mdx')()
 
 
 const nextConfig: NextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  transpilePackages:["next-mdx-remote"],
   images: {
     unoptimized: true, // ✅ disables Next.js optimization if using static export
   },
@@ -12,4 +11,4 @@ const nextConfig: NextConfig = {
 
 
 
-export default withMDX(nextConfig);
+export default nextConfig;

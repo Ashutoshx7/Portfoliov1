@@ -9,7 +9,7 @@
 @custom-variant dark (&:is(.dark *));
 /* Custom selection color */
 ::selection {
-  background: #dce000; /* bright yellow highlight */
+  background: #ffffff; /* bright yellow highlight */
   color: #000; /* black text */
 }
 
