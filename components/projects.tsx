@@ -107,11 +107,10 @@ const Projects = () => {
       <p
         className="
           font-custom2 text-secondary mt-3 px-4 py-[7px]
-          rounded-md text-sm inline-block
-          bg-black/[0.025] dark:bg-white/[0.04]
-          border border-black/[0.05] dark:border-white/[0.06]
-          shadow-[0_1px_3px_rgba(0,0,0,0.04)]
-          backdrop-blur-[3px]
+           text-sm inline-block
+          bg-black/[0.025] dark:bg-white/[0.04] border-neutral-200 border
+
+          
         "
       >
         I love designing and building thoughtful, production-grade applications.
@@ -134,7 +133,7 @@ const Projects = () => {
               relative group overflow-hidden rounded-xl
               border border-neutral-200 dark:border-neutral-800
               bg-white dark:bg-neutral-900
-              shadow-sm hover:shadow-md
+              hover:shadow-md
               transition-all duration-300
             "
           >

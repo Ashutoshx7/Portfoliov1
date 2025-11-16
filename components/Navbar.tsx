@@ -37,7 +37,7 @@ const Navbar = () => {
         className="fixed inset-x-0 top-0 z-50 flex max-w-3xl mx-auto items-center justify-between
         p-2 py-2 px-2 bg-white dark:bg-neutral-900 font-custom shadow-md "
       >
-        
+        <Link href="/">
         <Image
           className="w-10 h-10 rounded-full"
           src="/Avatar11.jpg"
@@ -45,6 +45,7 @@ const Navbar = () => {
           height={100}
           alt="Avatar"
         />
+        </Link>
 
         {/* Navigation links on the right */}
         <div className="flex items-center space-x-6">
