@@ -101,9 +101,7 @@ const Projects = () => {
   return (
     <div className="mt-8">
       {/* Title */}
-      <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary">
-        <span className="link--elara">Projects</span>
-      </h1>
+      
 
       {/* Subtitle */}
       <p
