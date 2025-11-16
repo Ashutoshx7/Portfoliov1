@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 
 const nextConfig: NextConfig = {
-  transpilePackages:["next-mdx-remote", "next-view-transitions"],
+  transpilePackages:["next-mdx-remote"],
   images: {
     unoptimized: true, // ✅ disables Next.js optimization if using static export
   },

@@ -6,6 +6,7 @@ import { WorkExperience } from "@/components/work-experience";
 import type { ExperienceItemType } from "@/components/work-experience";
 import Projects from "@/components/projects";
 
+
 // Social Icons
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
