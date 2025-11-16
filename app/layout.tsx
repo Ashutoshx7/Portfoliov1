@@ -1,17 +1,12 @@
 
-
 import type { Metadata } from "next";
 import "./globals.css";
-import   Footer from "@/components/footer";
-
-import Navbar from "@/components/Navbar"
+import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
 import { Instrument_Serif } from "next/font/google";
-import { ViewTransitions } from 'next-view-transitions'
+import { ViewTransitions } from 'next-view-transitions';
 
-
-const instrumentSerif = Instrument_Serif({ weight : ["400"] });
-
-
+const instrumentSerif = Instrument_Serif({ weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Karn",
@@ -25,13 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
-          className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
+          className={`${instrumentSerif.className} antialiased bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
         >
-          <Navbar ></Navbar>
+          <Navbar />
           {children}
-          <Footer></Footer>
+          <Footer />
         </body>
       </html>
     </ViewTransitions>
