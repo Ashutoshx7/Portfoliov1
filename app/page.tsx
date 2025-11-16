@@ -101,8 +101,7 @@ export default function Home() {
           <p>
             <span className="text-neutral-950  font-semibold">⚂ </span>
             <span>
-              Believe in putting my code where my mouth is — actions speak louder
-              than words, especially in code 💻.
+              Believe in putting my code where my mouth is.
             </span>
           </p>
         </div>
