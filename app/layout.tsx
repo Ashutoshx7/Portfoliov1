@@ -1,6 +1,8 @@
 
+
 import type { Metadata } from "next";
 import "./globals.css";
+import   Footer from "@/components/footer";
 
 import Navbar from "@/components/Navbar"
 import { Instrument_Serif } from "next/font/google";
@@ -22,15 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-     <ViewTransitions>
-    <html lang="en">
-      <body
-        className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
-      >
-        <Navbar ></Navbar>
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${instrumentSerif.className}  antialiased  bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
+        >
+          <Navbar ></Navbar>
+          {children}
+          <Footer></Footer>
+        </body>
+      </html>
     </ViewTransitions>
   );
 }
