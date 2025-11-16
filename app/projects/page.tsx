@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className=" text-primary font-custom font-semibold text-4xl tracking-tight  mx-auto">
           <span className="link--elara">Projects</span>
           </h1>
-          <p className="tracking-tight font-custom2 text-secondary max-w-lg text-sm md:text-sm mt-1">Hi there i love to build stuff for the people and passionate about building and vontributing to open olsurce and also hhere my projects and open source contribution over here feel free to take look </p>
+          <p className="tracking-tight font-custom2 text-secondary max-w-lg text-s md:text-s ">Hi there i love to build stuff for the people and passionate about building and vontributing to open olsurce and also hhere my projects and open source contribution over here feel free to take look </p>
 
         {/* RIGHT BORDER */}
         <div
@@ -33,16 +33,10 @@ export default function Home() {
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
           bg-[size:10px_10px] bg-fixed"
         ></div>
+                <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-3"></div>
 
-        {/* ---------------------------------------- */}
-        {/* HEADING + SOCIALS (FIXED SAME LINE) */}
-        {/* ---------------------------------------- */}
 
-        
-        {/* ---------------------------------------- */}
-        {/* SUBTEXT */}
-        {/* ---------------------------------------- */}
-
+       
         
        <Projects></Projects>
 

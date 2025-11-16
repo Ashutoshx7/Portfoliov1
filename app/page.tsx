@@ -34,7 +34,7 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center font-sans">
-      <Container className="min-h-[200vh] px-8 md:p-20 md:pb-10">
+      <Container className="min-h-[200vh] px-8 md:p-20 md:pb-10 shadow-lg">
 
         {/* RIGHT BORDER */}
         <div
