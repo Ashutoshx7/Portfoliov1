@@ -1,7 +1,8 @@
-import Link from "next/link";
+
 import Container from "@/components/containers";
 import { getAllBlogs } from "@/util/mdx_clean";
 import type { Metadata } from "next";
+import { Link } from 'next-view-transitions'
 
 export const metadata: Metadata = {
   title: "Blog | Karn Singh",
