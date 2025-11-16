@@ -29,7 +29,7 @@ export default async function BlogIndex() {
 
         {/* Header */}
         <div className="mb-3">
-          <h1 className="text-4xl text-primary  md:text-4xl font-bold font-custom tracking-tight ">
+          <h1 className="text-3xl text-primary  md:text-3xl font-bold font-custom tracking-tight ">
             <span className="link--elara">All blogs</span></h1>
 
           <p className="text-stext-muted-foreground leading-relaxed text-secondary mt-1 tracking-tight font-custom2 max-w-xl">
