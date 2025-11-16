@@ -4,7 +4,6 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/Navbar";
 import { Instrument_Serif } from "next/font/google";
-import { ViewTransitions } from 'next-view-transitions';
 
 const instrumentSerif = Instrument_Serif({ weight: ["400"] });
 
@@ -19,16 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${instrumentSerif.className} antialiased bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
-        >
-          <Navbar />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" suppressHydrationWarning style={{ viewTransitionName: "root" }}>
+      <body
+        className={`${instrumentSerif.className} antialiased bg-neutral-100 dark:bg-neutral-700 [--pattern-fg:var(--color-neutral-200)]`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }
