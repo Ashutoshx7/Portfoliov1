@@ -10,7 +10,7 @@ const Navbar = () => {
   const navItems = [
     { title: "Projects", href: "/projects" },
     { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/contact" },
+
   ];
 
   const [hovered, setHovered] = useState<number | null>(null);

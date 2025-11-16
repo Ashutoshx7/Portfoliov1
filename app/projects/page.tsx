@@ -15,7 +15,7 @@ export default function Home() {
   return (
     
       <Container className="min-h-[200vh] px-8 md:p-20 md:pb-10 mx-auto">
-        <h1 className=" text-primary font-custom font-semibold text-3xl tracking-tight  mx-auto">
+        <h1 className=" text-primary font-custom font-semibold text-3xl tracking-tight ">
           <span className="link--elara">Projects</span>
           </h1>
           <p className="tracking-tight font-custom2 text-secondary max-w-lg text-s md:text-s ">Hi there i love to build stuff for the people and passionate about building and vontributing to open olsurce and also hhere my projects and open source contribution over here feel free to take look </p>
