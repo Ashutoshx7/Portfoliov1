@@ -2,14 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ["next-mdx-remote"],
-
   images: {
     unoptimized: true,
-        domains: ["ghchart.rshah.org"],
-
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ghchart.rshah.org",
+      },
+    ],
   },
- 
- 
 };
 
 export default nextConfig;
