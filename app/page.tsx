@@ -2,34 +2,14 @@
 
 import Image from "next/image";
 import Container from "@/components/containers";
-import { WorkExperience } from "@/components/work-experience";
-import type { ExperienceItemType } from "@/components/work-experience";
+
 import Projects from "@/components/projects";
 
 
 // Social Icons
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
-const WORK_EXPERIENCE: ExperienceItemType[] = [
-  {
-    id: "1",
-    companyName: "Google summer of code",
-    companyLogo: "",
-    isCurrentEmployer: true,
-    positions: [
-      {
-        id: "1-1",
-        title: "Open Source Summer Inter",
-        employmentPeriod: "May 2025 - September2025",
-        employmentType: "Itern",
-        description: "build scalable web applications.",
-        icon: "code",
-        skills: ["JavaScript", "React", "Node.js"],
-        isExpanded: true,
-      },
-    ],
-  },
-];
+
 
 export default function Home() {
   return (
@@ -121,8 +101,7 @@ export default function Home() {
           <span className="link--elara py-5;">Experience</span>
         </h2>
 
-        <WorkExperience experiences={WORK_EXPERIENCE} />
-        <WorkExperience experiences={WORK_EXPERIENCE} />
+       
 
       </Container>
     </div>
