@@ -7,6 +7,7 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 
 
+
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center font-sans">

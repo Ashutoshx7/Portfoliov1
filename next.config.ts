@@ -1,16 +1,13 @@
 import type { NextConfig } from "next";
-/** @type {import('next').NextConfig} */
-
 
 const nextConfig: NextConfig = {
-  transpilePackages:["next-mdx-remote"],
+  transpilePackages: ["next-mdx-remote"],
+
   images: {
-    unoptimized: true, // ✅ disables Next.js optimization if using static export
+    unoptimized: true,
   },
 
-  
+ 
 };
-
-
 
 export default nextConfig;
