@@ -89,7 +89,7 @@ const GithubGraph = () => {
 
   return (
     <div>
-              <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
+      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
 
 
         <h1 className="text-primary font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
