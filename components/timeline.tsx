@@ -67,9 +67,13 @@ export const Timeline = () => {
 
   return (
     <div>
-      <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary pb-3 mt-5">
+      <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary pb-3 ">
         <span className="link--elara">Experience</span>
       </h1>
+      
+      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[-10] "></div>
+      
+
 
       <div className="pl-1">
         {data.map((year, idx) => (

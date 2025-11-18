@@ -108,7 +108,7 @@ const Projects = () => {
         className="
           font-custom2 text-secondary mt-3 px-4 py-[7px]
            text-sm inline-block
-          bg-black/[0.025] dark:bg-white/[0.04] border-neutral-200 border
+          bg-black/[0.025] dark:bg-white/[0.04] border-dashed border-neutral-200 border
 
           
         "
