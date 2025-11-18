@@ -3,8 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&display=swap");
 @plugin "@tailwindcss/typography";
 @import "tailwindcss";
-/* remove this line if you don’t have it installed */
+/* remove this line if you don't have it installed */
 @import "tw-animate-css";
+@import "cal-heatmap/cal-heatmap.css";
+
 
 @custom-variant dark (&:is(.dark *));
 /* Custom selection color */
@@ -85,3 +87,5 @@
     50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%
   );
 }
+
+

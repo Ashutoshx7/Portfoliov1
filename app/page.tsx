@@ -5,6 +5,7 @@ import Container from "@/components/containers";
 import Projects from "@/components/projects";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import Timeline from "@/components/timeline"
+import GithubGraph from "@/components/githubgraph";
 
 
 
@@ -95,6 +96,10 @@ export default function Home() {
 
 
         <Timeline></Timeline>
+                                  
+
+        <br></br>
+        <GithubGraph></GithubGraph>
        
 
         
