@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
 
   images: {
     unoptimized: true,
+        domains: ["ghchart.rshah.org"],
+
   },
  
  
