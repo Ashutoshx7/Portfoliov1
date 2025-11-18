@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Container from "@/components/containers";
-import { WorkExperience } from "@/components/work-experience";
-import type { ExperienceItemType } from "@/components/work-experience";
 import Projects from "@/components/projects";
 
 

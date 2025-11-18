@@ -1,12 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Container from "@/components/containers";
 
 import Projects from "@/components/projects";
-
-
-// Social Icons
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 
@@ -96,10 +92,7 @@ export default function Home() {
 
        
 
-        <h2 className="font-custom tracking-wide text-3xl font-bold text-primary mt-1">
-          <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)]"></div>
-          <span className="link--elara py-5;">Experience</span>
-        </h2>
+        
 
        
 
