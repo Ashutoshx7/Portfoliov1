@@ -8,8 +8,8 @@ const GithubGraph = () => {
               <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
 
 
-        <h1 className="text-primary font-custom font-bold  text-3xl tracking-tight">Proof Of work</h1>
-                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[-2] "></div>
+        <h1 className="text-primary font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
+                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-1 "></div>
                       <p className=" font-custom2 text-secondary mt-3 px-4 py-[7px]
                                  text-sm inline-block
                                  bg-black/[0.025] dark:bg-white/[0.04] border border-dashed border-neutral-300  my-5"> I live spending time in open source,building real stuff and solving real problems</p>
