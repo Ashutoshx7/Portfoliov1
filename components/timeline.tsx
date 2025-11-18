@@ -58,6 +58,7 @@ export const Timeline = () => {
 
   return (
     <div>
+
                   <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary pb-5">
             <span className="link--elara">Experience</span>
           </h1>

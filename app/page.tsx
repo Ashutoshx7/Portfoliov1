@@ -91,6 +91,8 @@ export default function Home() {
         <Projects />
 
         <br />
+                        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
+
 
         <Timeline></Timeline>
        
