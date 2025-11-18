@@ -4,6 +4,7 @@ import Container from "@/components/containers";
 
 import Projects from "@/components/projects";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import Timeline from "@/components/timeline"
 
 
 
@@ -18,7 +19,7 @@ export default function Home() {
           className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg)
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
           bg-[size:10px_10px] bg-fixed"
-        ></div>
+        > </div>
 
         {/* LEFT BORDER */}
         <div
@@ -91,6 +92,7 @@ export default function Home() {
 
         <br />
 
+        <Timeline></Timeline>
        
 
         
