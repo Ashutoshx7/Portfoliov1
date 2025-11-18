@@ -36,7 +36,7 @@ export default function Home() {
 
        
         
-       <Projects></Projects>
+       <Projects showAll={true}></Projects>
 
       </Container>
       )

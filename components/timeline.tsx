@@ -71,11 +71,11 @@ export const Timeline = () => {
         <span className="link--elara">Experience</span>
       </h1>
       
-      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[-10] "></div>
+      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[-6] "></div>
       
 
 
-      <div className="pl-1">
+      <div className="pl-6">
         {data.map((year, idx) => (
           <div key={year.title}>
             
@@ -87,6 +87,8 @@ export const Timeline = () => {
                 className="text-primary font-custom font-semibold py-1 tracking-wide text-lg hover:text-blue-700"
               >
                 {year.title}
+                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] border border-dashed opacity-10 "></div>
+
               </Link>
             ) : (
               <p className="text-primary font-custom font-semibold py-1 tracking-wide text-lg">

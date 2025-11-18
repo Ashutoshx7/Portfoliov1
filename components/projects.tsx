@@ -2,6 +2,7 @@
 
 import  { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Github, X } from "lucide-react";
 import {
@@ -57,7 +58,7 @@ const techColors: Record<TechKey, string> = {
   node: "#3C873A",
 };
 
-const Projects = () => {
+const Projects = ({ showAll = false }: { showAll?: boolean }) => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   useEffect(() => {
@@ -117,8 +118,8 @@ const Projects = () => {
       </p>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 py-6">
-        {projects.map((project, idx) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-5 py-7">
+        {(showAll ? projects : projects.slice(0, 2)).map((project, idx) => (
           <motion.div
             key={project.title}
             initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -154,11 +155,8 @@ const Projects = () => {
                 src={project.src}
                 alt={project.title}
                 fill
-                className="
-                  object-cover transition-all duration-500
-                  group-hover:scale-[1.04]
-                  group-hover:brightness-[0.90]
-                "
+                
+                className="object-cover"
               />
 
               {/* Black tint overlay */}
@@ -316,29 +314,53 @@ const Projects = () => {
   transition={{
     duration: 0.6,
     ease: "easeOut",
-    delay: projects.length * 0.12, // after last card animation
+    delay: 2 * 0.12,
   }}
   viewport={{ once: true, amount: 0.2 }}
-  className="w-full flex justify-center mt-2"
+  className="w-full "
 >
-  <button
-    className="
-      px-6 py-2  
-      rounded-xl
-      bg-white dark:bg-neutral-900
-      border border-neutral-200 dark:border-neutral-800
-      text-neutral-700 dark:text-neutral-200
-      shadow-sm
-      hover:shadow-md
-      transition-all duration-300
-      backdrop-blur-[2px]
+  {!showAll && (
+    <div>
+     
+      <div className="flex justify-center" >
+        <div className="flex justify-center mt-2">
+  <Link href="/projects">
+    <button
+      className="
+        group flex items-center gap-2 px-4 py-1.5 rounded-md
+        text-sm font-custom2 text-neutral-700 dark:text-neutral-300
+        border border-neutral-300 dark:border-neutral-700
+        bg-white dark:bg-neutral-900
+        shadow-sm
+        transition-all duration-300
 
-      hover:bg-neutral-50/80 dark:hover:bg-neutral-800/60
-      hover:border-neutral-300 dark:hover:border-neutral-600
-    "
-  >
-    Show More
-  </button>
+        hover:bg-neutral-100 dark:hover:bg-neutral-800
+        hover:border-neutral-400 dark:hover:border-neutral-500
+        hover:shadow-md
+      "
+    >
+      <span className="transition-colors duration-300 group-hover:text-neutral-900 dark:group-hover:text-white">
+        View all projects
+      </span>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3" />
+      </svg>
+    </button>
+  </Link>
+</div>
+
+        
+      </div>
+    </div>
+  )}
 </motion.div>
 
     </div>

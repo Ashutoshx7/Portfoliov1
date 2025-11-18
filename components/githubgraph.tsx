@@ -93,7 +93,7 @@ const GithubGraph = () => {
 
 
         <h1 className="text-primary font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
-                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-1 "></div>
+                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[0.4]"></div>
                       <p className=" font-custom2 text-secondary mt-3 px-4 py-[7px]
                                  text-sm inline-block
                                  bg-black/[0.025] dark:bg-white/[0.04] border border-dashed border-neutral-300  my-5"> I live spending time in open source,building real stuff and solving real problems</p>
@@ -110,11 +110,10 @@ const GithubGraph = () => {
         className="w-full object-cover  transition-transform duration-500  "
         
       />
-      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[-1]"></div>
-
+      
       {/* PRs Section */}
       {showPRSection && (
-      <div className="mt-10">
+      <div className="mt-4">
         <div className="flex items-center justify-between mb-1">
           <h2 className="text-primary font-custom font-bold text-2xl tracking-tight">
             <span className="link--elara">Pull Requests</span>
@@ -152,15 +151,8 @@ const GithubGraph = () => {
                 Closed
               </button>
             </div>
-            <button
-              onClick={() => setShowPRSection(false)}
-              className="text-secondary/50 hover:text-secondary transition-colors duration-200 p-1 rounded hover:bg-black/[0.03] dark:hover:bg-white/[0.05]"
-              aria-label="Close PR section"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+           
+            
           </div>
         </div>
         <p className="text-xs text-secondary font-custom2 mb-4">
@@ -201,15 +193,6 @@ const GithubGraph = () => {
                       {pr.repository.nameWithOwner}
                     </p>
                   </a>
-                  <button
-                    onClick={() => setClosedPRIds(new Set([...closedPRIds, pr.id]))}
-                    className="flex-shrink-0 text-secondary/30 hover:text-secondary/60 transition-colors opacity-0 group-hover:opacity-100"
-                    aria-label="Close PR"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
                 </div>
               ))}
             </div>
