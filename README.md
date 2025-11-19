@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<img width="1184" height="946" alt="Screenshot 2025-11-19 151858" src="https://github.com/user-attachments/assets/b733ff81-b547-4ed0-9f11-8f8a55d9b761" />
 
-## Getting Started
+# Portfolio Website
 
-First, run the development server:
+A modern, responsive, and fast developer portfolio built using Next.js, Tailwind CSS, TypeScript, Framer Motion, MDX, and GitHub API integration.  
+Features include blog support, project pages, contribution graph, SEO optimization, and a clean minimal design.
 
-```bash
+---
+
+## Live Demo
+
+https://your-portfolio-url.com
+
+---
+
+## Features
+
+- Next.js App Router architecture  
+- Tailwind CSS with Shadcn UI  
+- MDX support for blogs and project pages  
+- GitHub Contribution Graph integration  
+- Fetch GitHub repositories using API  
+- Framer Motion animations  
+- SEO and Open Graph metadata  
+- Fully responsive and accessible  
+
+---
+
+## Tech Stack
+
+| Technology | Description |
+|------------|-------------|
+| Next.js    | React framework for production |
+| TypeScript | Static typing |
+| Tailwind CSS | Utility-first styling |
+| Shadcn UI  | Accessible UI components |
+| MDX        | Markdown with React support |
+| Framer Motion | Animation library |
+| GitHub API | Dynamic repo fetching |
+| Vercel     | Deployment platform |
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+
+
+# Required for GitHub API repo fetching
+#So create .env in your root and add your github token 
+GITHUB_TOKEN="your_github_personal_access_token"
+
+
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
+npm install
+# or
+bun install
+
+Run the development server
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deployment
+Deploy to Vercel
 
-## Learn More
+After deploying, set the GITHUB_TOKEN in Vercel Environment Settings if needed.
 
-To learn more about Next.js, take a look at the following resources:
+License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
