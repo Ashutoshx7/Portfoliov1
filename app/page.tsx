@@ -85,14 +85,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-3 opacity-20"></div>
+        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-3 opacity-90 dark:opacity-15"></div>
 
         
 
         <Projects />
 
         <br />
-                        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
+                        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] opacity-90 dark:opacity-15 "></div>
 
 
         <Timeline></Timeline>

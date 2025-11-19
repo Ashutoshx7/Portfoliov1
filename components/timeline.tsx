@@ -128,7 +128,7 @@ export const Timeline = () => {
                 target="_blank"
                 className="text-neutral-900 dark:text-neutral-50 font-custom font-semibold py-1 tracking-wide text-lg hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors"
               >
-                                <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] border border-dashed opacity-10 mt- "></div>
+                                <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] border border-dashed opacity-15 dark:opacity-15 "></div>
 
                 {year.title}
               </Link>

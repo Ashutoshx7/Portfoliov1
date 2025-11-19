@@ -18,14 +18,14 @@ export default async function BlogIndex() {
       <div
           className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-50
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
-          bg-[size:10px_10px] bg-fixed"
+          bg-[size:10px_10px] bg-fixed opacity-90 dark:opacity-15"
         />
 
         {/* LEFT BORDER */}
         <div
           className="absolute left-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-50
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
-          bg-[size:10px_10px] bg-fixed"
+          bg-[size:10px_10px] bg-fixed opacity-90 dark:opacity-15"
         />
       <div className="max-w-4xl mx-auto ">
 
@@ -40,7 +40,7 @@ export default async function BlogIndex() {
             engineer at Google.
           </p>
         </div>
-        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
+        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] opacity-90 dark:opacity-15 "></div>
 
         {/* Blog Posts */}
         <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
