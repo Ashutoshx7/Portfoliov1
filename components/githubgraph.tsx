@@ -102,14 +102,17 @@ const GithubGraph = () => {
           
 
       {/* Graph Image */}
-      <Image
-        src={`https://ghchart.rshah.org/Ashutoshx7`}
-        alt="GitHub contribution graph"
-        width={900}
-        height={200}
-        className="w-full object-cover  transition-transform duration-500  "
-        
-      />
+      <div className="relative rounded-lg overflow-hidden dark:bg-neutral-900">
+        <Image
+          src={`https://ghchart.rshah.org/Ashutoshx7`}
+          alt="GitHub contribution graph"
+          width={900}
+          height={200}
+          className="w-full object-cover transition-transform duration-500"
+        />
+        {/* Dark mode tint overlay */}
+        <div className="absolute inset-0 dark:bg-black/40 pointer-events-none"></div>
+      </div>
       
       {/* PRs Section */}
       {showPRSection && (
