@@ -11,8 +11,7 @@ Features include blog support, project pages, contribution graph, SEO optimizati
 
 ## Live Demo
 
-https://your-portfolio-url.com
-
+https://www.karnashutosh.tech/
 ---
 
 ## Features
