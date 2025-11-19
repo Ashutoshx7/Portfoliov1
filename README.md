@@ -1,11 +1,13 @@
-<img width="1184" height="946" alt="Screenshot 2025-11-19 151858" src="https://github.com/user-attachments/assets/b733ff81-b547-4ed0-9f11-8f8a55d9b761" />
-
 # Portfolio Website
 
 A modern, responsive, and fast developer portfolio built using Next.js, Tailwind CSS, TypeScript, Framer Motion, MDX, and GitHub API integration.  
 Features include blog support, project pages, contribution graph, SEO optimization, and a clean minimal design.
 
 ---
+
+<img width="1184" height="946" alt="Screenshot 2025-11-19 151858" src="https://github.com/user-attachments/assets/b733ff81-b547-4ed0-9f11-8f8a55d9b761" />
+
+
 
 ## Live Demo
 
