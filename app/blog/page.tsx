@@ -16,14 +16,14 @@ export default async function BlogIndex() {
     
     <Container className="min-h-screen px-8 md:p-20 md:pb-10 relative mx-auto">
       <div
-          className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg)
+          className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-50
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
           bg-[size:10px_10px] bg-fixed"
         />
 
         {/* LEFT BORDER */}
         <div
-          className="absolute left-0 top-0 h-full w-6 border-x border-x-(--pattern-fg)
+          className="absolute left-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-50
           bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
           bg-[size:10px_10px] bg-fixed"
         />
@@ -31,10 +31,10 @@ export default async function BlogIndex() {
 
         {/* Header */}
         <div className="mb-3">
-          <h1 className="text-3xl text-primary  md:text-3xl font-bold font-custom tracking-tight ">
+          <h1 className="text-3xl text-neutral-900 dark:text-neutral-50 md:text-3xl font-bold font-custom tracking-tight ">
             <span className="link--elara">All blogs</span></h1>
 
-          <p className="text-stext-muted-foreground leading-relaxed text-secondary mt-1 tracking-tight font-custom2 max-w-xl">
+          <p className="text-s text-neutral-600 dark:text-neutral-400 leading-relaxed mt-1 tracking-tight font-custom2 max-w-xl">
             I'm a software engineer with a passion for building scalable
             and efficient systems. I'm currently working as a software
             engineer at Google.
@@ -43,7 +43,7 @@ export default async function BlogIndex() {
         <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
 
         {/* Blog Posts */}
-        <div className="divide-y divide-border/40">
+        <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
           {posts.map((p) => (
             <Link
               key={p.slug}
@@ -57,14 +57,15 @@ export default async function BlogIndex() {
                   <h2
                     className="
                       text-s md:text-xl font-semibold font-custom mb-1
-                      group-hover:text-primary transition-colors
+                      text-neutral-900 dark:text-neutral-50
+                      group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition-colors
                     "
                   >
                     {p.title ?? p.slug}
                   </h2>
 
                   {p.description && (
-                    <p className="text-s md:text-base text-muted-foreground font-custom2 leading-relaxed line-clamp-2">
+                    <p className="text-s md:text-base text-neutral-600 dark:text-neutral-400 font-custom2 leading-relaxed line-clamp-2">
                       {p.description}
                     </p>
                   )}
@@ -74,7 +75,7 @@ export default async function BlogIndex() {
                 {p.date && (
                   <time
                     className="
-                      text-sm text-muted-foreground whitespace-nowrap
+                      text-sm text-neutral-500 dark:text-neutral-500 whitespace-nowrap
                       md:pt-1 font-custom2
                     "
                   >

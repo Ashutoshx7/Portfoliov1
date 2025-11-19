@@ -47,6 +47,7 @@
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
   --border: oklch(0.92 0.004 286.32);
+  --pattern-fg: #d1d5db;
 }
 
 .dark {
@@ -56,6 +57,7 @@
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
   --border: oklch(0.274 0.006 286.033);
+  --pattern-fg: #404040;
 }
 
 /* === Minimal SVG Underline Animation (Elara style) === */
@@ -88,4 +90,53 @@
   );
 }
 
+/* === Prose Styling for Dark Mode === */
+.prose {
+  @apply text-neutral-900 dark:text-neutral-100;
+}
 
+.prose p {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-neutral-900 dark:text-neutral-50;
+}
+
+.prose a {
+  @apply text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.prose code {
+  @apply bg-blue-900 dark:bg-blue-900 text-blue-100 dark:text-blue-100 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-blue-900 dark:bg-blue-900 text-blue-100 dark:text-blue-100 p-4 rounded-lg overflow-x-auto border border-blue-800 dark:border-blue-800;
+}
+
+.prose pre code {
+  @apply bg-transparent text-blue-100 dark:text-blue-100 p-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 pl-4;
+}
+
+.prose strong {
+  @apply text-neutral-900 dark:text-neutral-50;
+}
+
+.prose ul,
+.prose ol {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+.prose li {
+  @apply text-neutral-700 dark:text-neutral-300;
+}

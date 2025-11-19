@@ -107,9 +107,9 @@ const Projects = ({ showAll = false }: { showAll?: boolean }) => {
       {/* Subtitle */}
       <p
         className="
-          font-custom2 text-secondary mt-3 px-4 py-[7px]
+          font-custom2 text-neutral-700 dark:text-neutral-300 mt-3 px-4 py-[7px]
            text-sm inline-block
-          bg-black/[0.025] dark:bg-white/[0.04] border-dashed border-neutral-200 border
+          bg-neutral-100 dark:bg-neutral-900 border-dashed border-neutral-300 dark:border-neutral-700 border
 
           
         "
@@ -200,7 +200,7 @@ const Projects = ({ showAll = false }: { showAll?: boolean }) => {
             <div className="p-5">
 
               <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg font-custom font-semibold text-primary">
+                <h2 className="text-lg font-custom font-semibold text-neutral-900 dark:text-neutral-50">
                   {project.title}
                 </h2>
 

@@ -113,7 +113,7 @@ export const Timeline = () => {
 
   return (
     <div>
-      <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-primary pb-1">
+      <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-neutral-900 dark:text-neutral-50 pb-1">
         <span className="link--elara">Experience</span>
       </h1>
       
@@ -126,14 +126,14 @@ export const Timeline = () => {
               <Link
                 href={year.href}
                 target="_blank"
-                className="text-primary font-custom font-semibold py-1 tracking-wide text-lg hover:text-blue-700"
+                className="text-neutral-900 dark:text-neutral-50 font-custom font-semibold py-1 tracking-wide text-lg hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors"
               >
                                 <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] border border-dashed opacity-10 mt- "></div>
 
                 {year.title}
               </Link>
             ) : (
-              <p className="text-primary font-custom font-semibold py-1 tracking-wide text-lg">
+              <p className="text-neutral-900 dark:text-neutral-50 font-custom font-semibold py-1 tracking-wide text-lg">
                 {year.title}
               </p>
             )}
@@ -141,10 +141,10 @@ export const Timeline = () => {
             {year.content.map((item, idx) => (
               <div
                 key={item.title}
-                className="flex justify-between items-center text-secondary font-custom2 text-sm md:text-s mt-3"
+                className="flex justify-between items-center text-neutral-700 dark:text-neutral-300 font-custom2 text-sm md:text-s mt-3"
               >
                 <div>
-                  <h3 className="font-medium">{item.title}</h3>
+                  <h3 className="font-medium text-neutral-900 dark:text-neutral-50">{item.title}</h3>
                   <ul className="py-5 list-disc pl-6">
                     {item.description
                       .toString()

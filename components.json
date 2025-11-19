@@ -19,6 +19,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@ncdai": "https://chanhdai.com/r/{name}.json"
+    "@ncdai": "https://chanhdai.com/r/{name}.json",
+    "@skiper-ui": "https://skiper-ui.com/registry/{name}.json"
   }
 }

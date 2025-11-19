@@ -92,11 +92,11 @@ const GithubGraph = () => {
       <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] "></div>
 
 
-        <h1 className="text-primary font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
+        <h1 className="text-neutral-900 dark:text-neutral-50 font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
                       <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[0.4]"></div>
-                      <p className=" font-custom2 text-secondary mt-3 px-4 py-[7px]
+                      <p className=" font-custom2 text-neutral-600 dark:text-neutral-400 mt-3 px-4 py-[7px]
                                  text-sm inline-block
-                                 bg-black/[0.025] dark:bg-white/[0.04] border border-dashed border-neutral-300  my-5"> I live spending time in open source,building real stuff and solving real problems</p>
+                                 bg-black/[0.025] dark:bg-white/[0.04] border border-dashed border-neutral-300 dark:border-neutral-700 my-5"> I live spending time in open source,building real stuff and solving real problems</p>
 
     
           
@@ -115,7 +115,7 @@ const GithubGraph = () => {
       {showPRSection && (
       <div className="mt-4">
         <div className="flex items-center justify-between mb-1">
-          <h2 className="text-primary font-custom font-bold text-2xl tracking-tight">
+          <h2 className="text-neutral-900 dark:text-neutral-50 font-custom font-bold text-2xl tracking-tight">
             <span className="link--elara">Pull Requests</span>
           </h2>
           <div className="flex items-center gap-2">
@@ -124,8 +124,8 @@ const GithubGraph = () => {
                 onClick={() => setFilterType("merged")}
                 className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 ${
                   filterType === "merged"
-                    ? "bg-white dark:bg-neutral-800 text-primary shadow-sm"
-                    : "text-secondary/70 hover:text-secondary"
+                    ? "bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 shadow-sm"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                 }`}
               >
                 Merged
@@ -134,8 +134,8 @@ const GithubGraph = () => {
                 onClick={() => setFilterType("open")}
                 className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 ${
                   filterType === "open"
-                    ? "bg-white dark:bg-neutral-800 text-primary shadow-sm"
-                    : "text-secondary/70 hover:text-secondary"
+                    ? "bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 shadow-sm"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                 }`}
               >
                 Open
@@ -144,8 +144,8 @@ const GithubGraph = () => {
                 onClick={() => setFilterType("closed")}
                 className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 ${
                   filterType === "closed"
-                    ? "bg-white dark:bg-neutral-800 text-primary shadow-sm"
-                    : "text-secondary/70 hover:text-secondary"
+                    ? "bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 shadow-sm"
+                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                 }`}
               >
                 Closed
@@ -155,7 +155,7 @@ const GithubGraph = () => {
             
           </div>
         </div>
-        <p className="text-xs text-secondary font-custom2 mb-4">
+        <p className="text-xs text-neutral-600 dark:text-neutral-400 font-custom2 mb-4">
           {filterType === "merged" 
             ? "Merged contributions to open source" 
             : filterType === "open"
@@ -165,12 +165,12 @@ const GithubGraph = () => {
         <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)]"></div>
 
         {loading ? (
-          <div className="text-secondary font-custom2 text-sm mt-4">Loading pull requests...</div>
+          <div className="text-neutral-600 dark:text-neutral-400 font-custom2 text-sm mt-4">Loading pull requests...</div>
         ) : prs.length > 0 ? (
           <div>
             <div className="space-y-2 mt-5">
               {prs.slice(0, showAll ? prs.length : initialCount).filter(pr => !closedPRIds.has(pr.id)).map((pr, index) => (
-                <div key={pr.id} className="group flex items-start gap-3 p-3 rounded-md transition-all duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.02] border border-transparent hover:border-neutral-300/50 dark:hover:border-neutral-700/50">
+                <div key={pr.id} className="group flex items-start gap-3 p-3 rounded-md transition-all duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 border border-transparent hover:border-neutral-300/50 dark:hover:border-neutral-700/50">
                   <div className="flex-shrink-0 mt-0.5">
                     <div className={`w-1 h-1 rounded-full group-hover:scale-150 transition-transform duration-200 ${
                       filterType === "merged"
@@ -186,10 +186,10 @@ const GithubGraph = () => {
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0 hover:no-underline"
                   >
-                    <h3 className="text-sm font-medium text-primary group-hover:text-primary/80 transition-colors truncate">
+                    <h3 className="text-sm font-medium text-neutral-900 dark:text-neutral-50 group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition-colors truncate">
                       {pr.title}
                     </h3>
-                    <p className="text-xs text-secondary/70 mt-0.5 font-custom2">
+                    <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5 font-custom2">
                       {pr.repository.nameWithOwner}
                     </p>
                   </a>
