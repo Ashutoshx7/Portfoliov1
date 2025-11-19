@@ -74,7 +74,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.2, type: "spring", stiffness: 300 }}
             >
-              <ThemeToggleButton variant="circle" start="center" />
+              <ThemeToggleButton variant="circle" start="top-right" />
             </motion.div>
           </div>
         </div>
