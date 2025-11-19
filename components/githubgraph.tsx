@@ -1,7 +1,9 @@
 "use client"
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, cloneElement } from "react";
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
+import { Tooltip } from "react-tooltip";
 
 interface PR {
   id: number;
@@ -17,14 +19,20 @@ interface PR {
 }
 
 const GithubGraph = () => {
+  const { theme } = useTheme();
   const [prs, setPrs] = useState<PR[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAll, setShowAll] = useState(false);
   const [filterType, setFilterType] = useState<"merged" | "open" | "closed">("merged");
   const [showPRSection, setShowPRSection] = useState(true);
   const [closedPRIds, setClosedPRIds] = useState<Set<number>>(new Set());
+  const [mounted, setMounted] = useState(false);
 
   const initialCount = 2;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const fetchPRs = async () => {
@@ -89,29 +97,53 @@ const GithubGraph = () => {
 
   return (
     <div>
-      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] opacity-90 dark:opacity-15 "></div>
+      <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) opacity-90 dark:opacity-15 "></div>
 
 
         <h1 className="text-neutral-900 dark:text-neutral-50 font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
-                      <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-[0.4] opacity-90 dark:opacity-15"></div>
+                      <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) my-[0.4] opacity-90 dark:opacity-15"></div>
                       <p className=" font-custom2 text-neutral-600 dark:text-neutral-400 mt-3 px-4 py-[7px]
                                  text-sm inline-block
-                                 bg-black/[0.025] dark:bg-white/[0.04] border border-dashed border-neutral-300 dark:border-neutral-700 my-5"> I live spending time in open source,building real stuff and solving real problems</p>
+                                 bg-black/5 dark:bg-white/5 border border-dashed border-neutral-300 dark:border-neutral-700 my-5"> I live spending time in open source,building real stuff and solving real problems</p>
 
     
           
 
-      {/* Graph Image */}
-      <div className="relative rounded-lg overflow-hidden dark:bg-neutral-900">
-        <Image
-          src={`https://ghchart.rshah.org/Ashutoshx7`}
-          alt="GitHub contribution graph"
-          width={900}
-          height={200}
-          className="w-full object-cover transition-transform duration-500"
-        />
-        {/* Dark mode tint overlay */}
-        <div className="absolute inset-0 dark:bg-black/40 pointer-events-none"></div>
+      {/* Graph Component */}
+      <div className="flex justify-start  pr-10 ">
+        <div className="w-full overflow-hidden flex justify-center">
+          {mounted && (
+            <>
+              <GitHubCalendar 
+                username="Ashutoshx7" 
+                colorScheme={theme === "dark" ? "dark" : "light"}
+                blockSize={10}
+                blockMargin={3}
+                fontSize={12}
+                style={{
+                  color: theme === "dark" ? "#e5e5e5" : "#171717",
+                }}
+                renderBlock={(block: any, activity: any) => 
+                  cloneElement(block, {
+                    "data-tooltip-id": "github-tooltip",
+                    "data-tooltip-content": `${activity.count} contributions on ${activity.date}`,
+                  })
+                }
+              />
+              <Tooltip 
+                id="github-tooltip" 
+                style={{ 
+                  color: theme === "dark" ? "#e5e5e5" : "#171717",
+                  borderRadius: "8px",
+                  padding: "8px 12px",
+                  fontSize: "12px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  border: theme === "dark" ? "1px solid #404040" : "1px solid #e5e5e5",
+                }}
+              />
+            </>
+          )}
+        </div>
       </div>
       
       {/* PRs Section */}
@@ -122,7 +154,7 @@ const GithubGraph = () => {
             <span className="link--elara">Pull Requests</span>
           </h2>
           <div className="flex items-center gap-2">
-            <div className="flex gap-1 bg-black/[0.04] dark:bg-white/[0.05] rounded-lg p-1 border border-neutral-300/30 dark:border-neutral-700/30 ">
+            <div className="flex gap-1 bg-black/5 dark:bg-white/5 rounded-lg p-1 border border-neutral-300/30 dark:border-neutral-700/30 ">
               <button
                 onClick={() => setFilterType("merged")}
                 className={`px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 ${
@@ -165,7 +197,7 @@ const GithubGraph = () => {
             ? "Active pull requests"
             : "Closed pull requests"}
         </p>
-        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] opacity-90 dark:opacity-15"></div>
+        <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) opacity-90 dark:opacity-15"></div>
 
         {loading ? (
           <div className="text-neutral-600 dark:text-neutral-400 font-custom2 text-sm mt-4">Loading pull requests...</div>
@@ -174,13 +206,13 @@ const GithubGraph = () => {
             <div className="space-y-2 mt-5">
               {prs.slice(0, showAll ? prs.length : initialCount).filter(pr => !closedPRIds.has(pr.id)).map((pr, index) => (
                 <div key={pr.id} className="group flex items-start gap-3 p-3 rounded-md transition-all duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 border border-transparent hover:border-neutral-300/50 dark:hover:border-neutral-700/50">
-                  <div className="flex-shrink-0 mt-0.5">
+                  <div className="shrink-0 mt-0.5">
                     <div className={`w-1 h-1 rounded-full group-hover:scale-150 transition-transform duration-200 ${
                       filterType === "merged"
-                        ? "bg-gradient-to-r from-purple-400 to-pink-400"
+                        ? "bg-linear-to-r from-purple-400 to-pink-400"
                         : filterType === "open"
-                        ? "bg-gradient-to-r from-green-400 to-emerald-400"
-                        : "bg-gradient-to-r from-red-400 to-rose-400"
+                        ? "bg-linear-to-r from-green-400 to-emerald-400"
+                        : "bg-linear-to-r from-red-400 to-rose-400"
                     }`}></div>
                   </div>
                   <a
