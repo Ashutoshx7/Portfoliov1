@@ -110,7 +110,7 @@ const GithubGraph = () => {
           
 
       {/* Graph Component */}
-      <div className="flex justify-start  pr-10 ">
+      <div className="flex justify-start  pr-60 w-240 ">
         <div className="w-full overflow-hidden flex justify-center">
           {mounted && (
             <>
