@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
+import { Github, Linkedin, Twitter } from 'lucide-react'
 
 const Footer = () => {
   const socialLinks = [
@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200/40 dark:border-neutral-800/40">
-      <div className="max-w-4xl mx-auto flex items-center justify-between gap-4 py-2 px-4">
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-4 py-3 px-4 text-center sm:flex-row sm:justify-between sm:text-left">
         <p className="text-neutral-600 dark:text-neutral-400 text-sm font-custom2 tracking-normal transition-colors duration-300 hover:text-neutral-900 dark:hover:text-neutral-100">
           Built with love by Karn Singh
         </p>

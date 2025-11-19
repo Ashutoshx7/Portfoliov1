@@ -13,32 +13,32 @@ import GithubGraph from "@/components/githubgraph";
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center font-sans">
-      <Container className="min-h-[200vh] px-8 md:p-20 md:pb-10 ">
+      <Container className="min-h-screen w-full pt-24 pb-12 md:pt-14 md:pb-10 ">
 
         {/* RIGHT BORDER */}
         <div
           className="absolute right-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-90 dark:opacity-15
-          bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
-          bg-[size:10px_10px] bg-fixed"
+          bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]
+          bg-size-[10px_10px] bg-fixed"
         > </div>
 
         {/* LEFT BORDER */}
         <div
           className="absolute left-0 top-0 h-full w-6 border-x border-x-(--pattern-fg) opacity-90 dark:opacity-15
-          bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)]
-          bg-[size:10px_10px] bg-fixed"
+          bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)]
+          bg-size-[10px_10px] bg-fixed"
         ></div>
 
         {/* ---------------------------------------- */}
         {/* HEADING + SOCIALS (FIXED SAME LINE) */}
         {/* ---------------------------------------- */}
 
-        <div className="flex items-center justify-between w-full">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4">
           <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-neutral-900 dark:text-neutral-50">
             <span className="link--elara">Karn Singh</span>
           </h1>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4 sm:justify-end">
             <Github
               size={20}
               onClick={() => window.open("https://github.com/your-github", "_blank")}
@@ -85,14 +85,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] my-3 opacity-90 dark:opacity-15"></div>
+        <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) my-3 opacity-90 dark:opacity-15"></div>
 
         
 
         <Projects />
 
         <br />
-                        <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] opacity-90 dark:opacity-15 "></div>
+                        <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) opacity-90 dark:opacity-15"></div>
 
 
         <Timeline></Timeline>
@@ -100,10 +100,6 @@ export default function Home() {
 
         <br></br>
         <GithubGraph></GithubGraph>
-       
-
-        
-
        
 
       </Container>

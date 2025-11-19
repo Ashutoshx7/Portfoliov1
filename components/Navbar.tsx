@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/containers";
@@ -17,17 +17,29 @@ const Navbar = () => {
   const [hovered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20);
   });
+
+  useEffect(() => {
+    const updateViewport = () => {
+      if (typeof window === "undefined") return;
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    updateViewport();
+    window.addEventListener("resize", updateViewport);
+    return () => window.removeEventListener("resize", updateViewport);
+  }, []);
 
   return (
     <Container>
       <motion.nav
         animate={{
           boxShadow: scrolled ? "var(--shadow-input)" : "none",
-          width: scrolled ? "45%" : "75%",
+          width: isDesktop ? (scrolled ? "45%" : "75%") : "100%",
           y: scrolled ? 10 : 0,
           borderRadius: scrolled ? "2.5rem" : "0rem", 
         }}
@@ -35,7 +47,7 @@ const Navbar = () => {
           duration: 0.3,
           ease: "easeOut",
         }}
-        className="fixed inset-x-0 top-0 z-50 flex max-w-3xl mx-auto items-center justify-between
+        className="fixed inset-x-0 top-0 z-50 flex w-full max-w-3xl mx-auto items-center justify-between
         px-4 py-3 bg-neutral-50/80 dark:bg-neutral-950/70 backdrop-blur-lg font-custom border-b border-neutral-200/40 dark:border-neutral-800/30 text-neutral-900 dark:text-neutral-50 transition-all duration-300"
       >
         <Link href="/" className="hover:opacity-75 transition-opacity duration-300">
@@ -49,7 +61,7 @@ const Navbar = () => {
         </Link>
 
         {/* Navigation links on the right */}
-        <div className="flex items-center gap-6">
+        <div className="ml-auto flex flex-wrap items-center justify-end gap-3 sm:gap-6">
           {navItems.map((item, idx) => (
             <Link
               className="text-sm relative px-3 py-1.5 text-neutral-600 dark:text-neutral-300 font-medium transition-colors duration-300 hover:text-neutral-900 dark:hover:text-neutral-50"

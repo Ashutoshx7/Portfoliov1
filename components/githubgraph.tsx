@@ -97,21 +97,21 @@ const GithubGraph = () => {
 
   return (
     <div>
-      <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) opacity-90 dark:opacity-15 "></div>
+      <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) opacity-90 dark:opacity-15"></div>
 
 
         <h1 className="text-neutral-900 dark:text-neutral-50 font-custom font-bold  text-3xl tracking-tight "><span className="link--elara">Proof Of Work</span></h1>
                       <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) my-[0.4] opacity-90 dark:opacity-15"></div>
                       <p className=" font-custom2 text-neutral-600 dark:text-neutral-400 mt-3 px-4 py-[7px]
-                                 text-sm inline-block
+                                 text-sm inline-flex w-full max-w-2xl flex-wrap items-center justify-center text-center
                                  bg-black/5 dark:bg-white/5 border border-dashed border-neutral-300 dark:border-neutral-700 my-5"> I live spending time in open source,building real stuff and solving real problems</p>
 
     
           
 
       {/* Graph Component */}
-      <div className="flex justify-start  pr-60 w-240 ">
-        <div className="w-full overflow-hidden flex justify-center">
+      <div className="w-full overflow-x-auto">
+        <div className="flex min-w-[640px] justify-center px-4">
           {mounted && (
             <>
               <GitHubCalendar 
@@ -149,7 +149,7 @@ const GithubGraph = () => {
       {/* PRs Section */}
       {showPRSection && (
       <div className="mt-4">
-        <div className="flex items-center justify-between mb-1">
+        <div className="mb-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-neutral-900 dark:text-neutral-50 font-custom font-bold text-2xl tracking-tight">
             <span className="link--elara">Pull Requests</span>
           </h2>

@@ -128,7 +128,7 @@ export const Timeline = () => {
                 target="_blank"
                 className="text-neutral-900 dark:text-neutral-50 font-custom font-semibold py-1 tracking-wide text-lg hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors"
               >
-                                <div className="absolute right-6 w-212 h-px bg-[var(--pattern-fg)] border border-dashed opacity-15 dark:opacity-15 "></div>
+                                <div className="absolute right-6 w-212 h-px bg-(--pattern-fg) border border-dashed opacity-15 dark:opacity-15"></div>
 
                 {year.title}
               </Link>
@@ -141,7 +141,7 @@ export const Timeline = () => {
             {year.content.map((item, idx) => (
               <div
                 key={item.title}
-                className="flex justify-between items-center text-neutral-700 dark:text-neutral-300 font-custom2 text-sm md:text-s mt-3"
+                className="flex flex-col gap-4 text-neutral-700 dark:text-neutral-300 font-custom2 text-sm md:text-s mt-3 md:flex-row md:items-center md:justify-between"
               >
                 <div>
                   <h3 className="font-medium text-neutral-900 dark:text-neutral-50">{item.title}</h3>
@@ -183,7 +183,7 @@ export const Timeline = () => {
                   alt={item.title}
                   width={200}
                   height={120}
-                  className="rounded-full size-10"
+                  className="rounded-full size-10 self-start md:self-auto"
                 />
               </div>
             ))}
