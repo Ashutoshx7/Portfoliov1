@@ -114,7 +114,7 @@ export const Timeline = () => {
   return (
     <div>
       <h1 className="text-3xl md:text-3xl font-bold font-custom tracking-tight text-neutral-900 dark:text-neutral-50 pb-1">
-        <span className="link--elara">Experience</span>
+        <span className="link--elara">Experiences</span>
       </h1>
       
 
