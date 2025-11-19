@@ -197,12 +197,17 @@ const GithubGraph = () => {
               ))}
             </div>
             {prs.length > initialCount && (
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="mt-5 text-xs font-custom2 text-secondary/70 hover:text-primary transition-colors duration-200 py-1 px-0"
-              >
-                {showAll ? "← Show Less" : `→ Show More (${prs.length - closedPRIds.size - initialCount} more)`}
-              </button>
+              <div className="flex justify-center mt-6">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-4 py-2 text-sm font-custom2 font-medium text-neutral-900 dark:text-neutral-50 
+                  bg-neutral-100 dark:bg-neutral-800/60 hover:bg-neutral-200 dark:hover:bg-neutral-700/80
+                  border border-neutral-300/50 dark:border-neutral-700/50 rounded-lg
+                  transition-all duration-300 hover:shadow-md"
+                >
+                  {showAll ? "↑ Collapse" : `↓ Expand • ${prs.length - closedPRIds.size - initialCount} more`}
+                </button>
+              </div>
             )}
           </div>
         ) : (
