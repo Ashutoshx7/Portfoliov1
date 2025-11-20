@@ -134,7 +134,7 @@ const Projects = ({ showAll = false }: { showAll?: boolean }) => {
             className="
               relative group overflow-hidden rounded-xl
               border border-neutral-200 dark:border-neutral-800
-              bg-white dark:bg-neutral-900
+              bg-white dark:bg-black
               hover:shadow-md
               transition-all duration-300
             "

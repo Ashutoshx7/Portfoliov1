@@ -4,9 +4,9 @@ import Container from "@/components/containers";
 
 import Projects from "@/components/projects";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
-import Timeline from "@/components/timeline"
+import Timeline from "@/components/timeline";
 import GithubGraph from "@/components/githubgraph";
-
+import DisplacementText from "@/components/ui/displacement-text";
 
 
 
@@ -100,6 +100,9 @@ export default function Home() {
 
         <br></br>
         <GithubGraph></GithubGraph>
+
+        <br></br>
+        <DisplacementText></DisplacementText>
        
 
       </Container>
