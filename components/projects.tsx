@@ -326,7 +326,7 @@ const Projects = ({ showAll = false }: { showAll?: boolean }) => {
       <div className="flex justify-center" >
         <div className="flex justify-center mt-2">
   <Link href="/projects">
-    <AnimatedButton className="dark:bg-neutral-900 bg-neutral-50"
+    <AnimatedButton className="dark:bg-neutral-900 bg-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-900"
   >
       
         View all projects

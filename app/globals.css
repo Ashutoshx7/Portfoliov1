@@ -120,13 +120,9 @@
   @apply bg-blue-900 dark:bg-blue-900 text-blue-100 dark:text-blue-100 p-4 rounded-lg overflow-x-auto border border-blue-800 dark:border-blue-800;
 }
 
-.prose pre code {
-  @apply bg-transparent text-blue-100 dark:text-blue-100 p-0;
-}
 
-.prose blockquote {
-  @apply border-l-4 border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 pl-4;
-}
+
+
 
 .prose strong {
   @apply text-neutral-900 dark:text-neutral-50;
@@ -139,4 +135,45 @@
 
 .prose li {
   @apply text-neutral-700 dark:text-neutral-300;
+}
+
+
+/* === Scribble Animated Underline for Headings (.link--carme) === */
+
+.link--carme {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px; /* Space for underline */
+  cursor: pointer;
+  font-size: inherit; /* Keeps original text size (e.g. h1, h2) */
+  font-weight: inherit;
+}
+
+/* Inline SVG container (automatically positioned) */
+.link--carme svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px; /* Adjust length of scribble */
+  height: 18px;
+  pointer-events: none;
+}
+
+/* Scribble line style */
+.link--carme path {
+  stroke: currentColor; /* Matches text color */
+  stroke-width: 2.3px;
+  fill: none;
+  stroke-linecap: round;
+
+  /* Hide stroke initially (for animation) */
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+/* Animate on hover */
+.link--carme:hover path {
+  stroke-dashoffset: 0;
 }
